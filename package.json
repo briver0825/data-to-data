@@ -1,0 +1,27 @@
+{
+  "name": "data-to-data",
+  "version": "1.0.0",
+  "description": "data-to-data is a javascript data conversion tool.",
+  "main": "bundle.es.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup --config",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaozhuclassmate/data-to-data.git"
+  },
+  "keywords": [],
+  "author": "briver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaozhuclassmate/data-to-data/issues"
+  },
+  "homepage": "https://github.com/xiaozhuclassmate/data-to-data#readme",
+  "devDependencies": {
+    "rollup": "^3.10.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "vitest": "^0.28.1"
+  }
+}
