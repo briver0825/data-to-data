@@ -49,7 +49,7 @@ describe('main test', () => {
     expect(dataToData(target, mapping2)).toEqual(result)
   })
 
-  it("test", () => {
+  it("array operation", () => {
 
     const target = {
       arr: [
@@ -72,6 +72,5 @@ describe('main test', () => {
       ]
     }
     expect(dataToData(target, mapping)).toEqual(result)
-  
   })
 })
