@@ -1,4 +1,4 @@
-import { get } from "./utils"
+import { get, getInjectValue, isArray, isInjectValue, isObject, objectTypeString } from "./utils"
 
 export function dataToData(target, mapping){
 
@@ -16,18 +16,23 @@ export function dataToData(target, mapping){
       result[key] = get(target, value)
     }
 
-    const valueType = Object.prototype.toString.call(value)
+    const valueType = objectTypeString(value)
 
-    if(valueType === '[object Object]'){
+    if(isObject(value)){
       result[key] = dataToData(target, value)
     }
-    if(valueType === '[object Array]'){
+
+    if(isArray(value)){
       const k = value[0]
       const callback = value[1]
       const arr = get(target, k)
       result[key] = arr.map(v => {
         return callback(v)
       })
+    }
+
+    if(isInjectValue(value)){
+      result[key] = getInjectValue(value)
     }
   }
 

@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { dataToData } from "../main";
+import { injectValue } from "../utils";
 
 describe('main test', () => {
   it("basic using", () => {
@@ -71,6 +72,25 @@ describe('main test', () => {
         'Xi-Peter'
       ]
     }
+    expect(dataToData(target, mapping)).toEqual(result)
+  })
+
+  it("inject value", () => {
+    const target = {
+      a: 'a',
+      b: 'b'
+    }
+
+    const mapping = {
+      a: 'a',
+      b: injectValue(123)
+    }
+
+    const result = {
+      a: 'a',
+      b: 123
+    }
+
     expect(dataToData(target, mapping)).toEqual(result)
   })
 })
