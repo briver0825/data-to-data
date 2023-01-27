@@ -53,3 +53,18 @@ const mapping = {
 
 dataToData(data, mapping) // { data: [ 'ID-1', 'ID-2', 'ID-3' ] }
 ```
+
+Inject value
+``` js
+import { injectValue } from 'data-to-data'
+
+const data = {
+  a: 'a'
+}
+
+const mapping = {
+  data: injectValue('hello')
+}
+
+dataToData(data, mapping) // { data: 'hello' }
+```
