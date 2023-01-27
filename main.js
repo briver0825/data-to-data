@@ -1,5 +1,7 @@
 import { get, getInjectValue, isArray, isInjectValue, isObject, objectTypeString } from "./utils"
 
+export { injectValue } from "./utils"
+
 export function dataToData(target, mapping){
 
   if(!target || !mapping){

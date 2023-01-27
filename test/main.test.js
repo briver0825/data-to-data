@@ -1,6 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { dataToData } from "../main";
-import { injectValue } from "../utils";
+import { dataToData, injectValue } from "../main";
 
 describe('main test', () => {
   it("basic using", () => {
