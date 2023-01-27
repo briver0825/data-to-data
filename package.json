@@ -2,8 +2,9 @@
   "name": "data-to-data",
   "version": "1.0.0",
   "description": "data-to-data is a javascript data conversion tool.",
-  "main": "bundle.es.js",
-  "type": "module",
+  "main": "lib/bundle.cjs.js",
+  "module": "lib/bundle.esm.js",
+  "browser": "lib/bundle.browser.js",
   "scripts": {
     "build": "rollup --config",
     "test": "vitest"
