@@ -1,6 +1,6 @@
 {
   "name": "data-to-data",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "data-to-data is a javascript data conversion tool.",
   "main": "lib/bundle.cjs.js",
   "module": "lib/bundle.esm.js",
